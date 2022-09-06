@@ -1,0 +1,2 @@
+# SenaSoft
+Proyecto SenaSoft
