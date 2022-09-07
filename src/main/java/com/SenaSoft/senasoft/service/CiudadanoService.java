@@ -39,8 +39,8 @@ public class CiudadanoService {
     public boolean deleteCiudadano(Integer id){
         ciudadanoRepository.deleteById(id);
         if (getCiudadanoById(id)!=null){
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }

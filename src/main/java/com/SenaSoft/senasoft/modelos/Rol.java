@@ -39,4 +39,6 @@ public class Rol {
     public void setNombreRol(String nombreRol) {
         this.nombreRol = nombreRol;
     }
+
+
 }
