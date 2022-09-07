@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ciudadano")
-public class ciudadano {
+public class Ciudadano {
 
     //Atributos
     @Id
@@ -33,10 +33,10 @@ public class ciudadano {
 
     //Constructor
 
-    public ciudadano() {
+    public Ciudadano() {
     }
 
-    public ciudadano(int id, String cedula, String nombres, String apellidos, String sexo, String telefonoCel, String telefonoFijo, String correoElec, String municipio, String direccion, String barrioVereda, String fNacimiento, String etnia, String cDiscapacidad, String estratoResid, String uNEeducativo, boolean accesoDispTec, String dispositivosTec, boolean conectivInternet, String regimenAfiliado) {
+    public Ciudadano(int id, String cedula, String nombres, String apellidos, String sexo, String telefonoCel, String telefonoFijo, String correoElec, String municipio, String direccion, String barrioVereda, String fNacimiento, String etnia, String cDiscapacidad, String estratoResid, String uNEeducativo, boolean accesoDispTec, String dispositivosTec, boolean conectivInternet, String regimenAfiliado) {
         this.id = id;
         this.cedula = cedula;
         this.nombres = nombres;
