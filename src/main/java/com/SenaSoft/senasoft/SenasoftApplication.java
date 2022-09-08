@@ -98,7 +98,7 @@ public class SenasoftApplication {
 			workbook.setSheetName(0, "Hoja excel");
 
 			String[] headers = new String[]{
-					"Producto",
+					"Ciudadanos partícipes",
 					"Precio",
 					"Enlace"
 			};
@@ -121,8 +121,7 @@ public class SenasoftApplication {
 			}
 
 			for (int i = 0; i < 5; ++i) {
-				HSSFRow dataRow = sheet.createRow(i + 1);
-				
+
 
 			}
 
