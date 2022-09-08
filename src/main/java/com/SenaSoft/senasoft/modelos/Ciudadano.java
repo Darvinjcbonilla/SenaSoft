@@ -1,6 +1,7 @@
 package com.SenaSoft.senasoft.modelos;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "ciudadano")
@@ -10,8 +11,8 @@ public class Ciudadano {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String TipoDoc;
-    private String cedula;
+    private String tipoDoc;
+    private String numDoc;
     private String nombres;
     private String apellidos;
     private String sexo;
@@ -21,7 +22,7 @@ public class Ciudadano {
     private String municipio;
     private String direccion;
     private String barrioVereda;
-    private String fNacimiento;
+    private java.sql.Date fNacimiento;
     private String etnia;
     private String cDiscapacidad;
     private int estratoResid;
@@ -36,10 +37,10 @@ public class Ciudadano {
     public Ciudadano() {
     }
 
-    public Ciudadano(int id, String tipoDoc, String cedula, String nombres, String apellidos, String sexo, String telefonoCel, String telefonoFijo, String correoElec, String municipio, String direccion, String barrioVereda, String fNacimiento, String etnia, String cDiscapacidad, int estratoResid, String uNEeducativo, boolean accesoDispTec, int id_cual_cuales, boolean conectivInternet, int id_tipo_reg_afiliado) {
+    public Ciudadano(int id, String tipoDoc, String numDoc, String nombres, String apellidos, String sexo, String telefonoCel, String telefonoFijo, String correoElec, String municipio, String direccion, String barrioVereda, Date fNacimiento, String etnia, String cDiscapacidad, int estratoResid, String uNEeducativo, boolean accesoDispTec, int id_cual_cuales, boolean conectivInternet, int id_tipo_reg_afiliado) {
         this.id = id;
-        TipoDoc = tipoDoc;
-        this.cedula = cedula;
+        this.tipoDoc = tipoDoc;
+        this.numDoc = numDoc;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.sexo = sexo;
@@ -72,19 +73,19 @@ public class Ciudadano {
     }
 
     public String getTipoDoc() {
-        return TipoDoc;
+        return tipoDoc;
     }
 
     public void setTipoDoc(String tipoDoc) {
-        TipoDoc = tipoDoc;
+        this.tipoDoc = tipoDoc;
     }
 
-    public String getCedula() {
-        return cedula;
+    public String getNumDoc() {
+        return numDoc;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public void setNumDoc(String numDoc) {
+        this.numDoc = numDoc;
     }
 
     public String getNombres() {
@@ -159,11 +160,11 @@ public class Ciudadano {
         this.barrioVereda = barrioVereda;
     }
 
-    public String getfNacimiento() {
+    public Date getfNacimiento() {
         return fNacimiento;
     }
 
-    public void setfNacimiento(String fNacimiento) {
+    public void setfNacimiento(Date fNacimiento) {
         this.fNacimiento = fNacimiento;
     }
 

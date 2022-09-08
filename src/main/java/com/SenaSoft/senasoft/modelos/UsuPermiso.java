@@ -7,27 +7,71 @@ import javax.persistence.*;
 public class UsuPermiso {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private int id;
+    private String nombre;
     @ManyToOne
-    @JoinColumn(name = "usua_rol_id_usu_rol")
-    private UsuRol usuaRol;
+    @JoinColumn(name = "rol_id")
+    private Rol rol;
     @ManyToOne
-    @JoinColumn(name = "permiso_id")
-    private Permisos permiso;
+    @JoinColumn(name = "sondeo_id")
+    private Sondeo sondeo;
+    @ManyToOne
+    @JoinColumn(name = "ciudadano_id")
+    private Ciudadano ciudadano;
 
-    public Permisos getPermiso() {
-        return permiso;
+    //Constructor
+    public UsuPermiso() {
     }
 
-    public void setPermiso(Permisos permiso) {
-        this.permiso = permiso;
+    public UsuPermiso(int id, String nombre, Rol rol, Sondeo sondeo, Ciudadano ciudadano) {
+        this.id = id;
+        this.nombre = nombre;
+        this.rol = rol;
+        this.sondeo = sondeo;
+        this.ciudadano = ciudadano;
     }
 
-    public UsuRol getUsuaRol() {
-        return usuaRol;
+    //Set y get
+
+    public int getId() {
+        return id;
     }
 
-    public void setUsuaRol(UsuRol usuaRol) {
-        this.usuaRol = usuaRol;
+    public void setId(int id) {
+        this.id = id;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Ciudadano getCiudadano() {
+        return ciudadano;
+    }
+
+    public void setCiudadano(Ciudadano ciudadano) {
+        this.ciudadano = ciudadano;
+    }
+
+    public Sondeo getSondeo() {
+        return sondeo;
+    }
+
+    public void setSondeo(Sondeo sondeo) {
+        this.sondeo = sondeo;
+    }
+
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
 }

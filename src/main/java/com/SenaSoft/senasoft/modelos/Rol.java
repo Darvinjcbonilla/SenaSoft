@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
-    String nombreRol;
+    private int id;
+    private String nombreRol;
 
 
     //Constructor

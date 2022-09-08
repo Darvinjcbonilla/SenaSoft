@@ -1,7 +1,9 @@
 package com.SenaSoft.senasoft.service;
 
 import com.SenaSoft.senasoft.modelos.Ciudadano;
+import com.SenaSoft.senasoft.modelos.Sondeo;
 import com.SenaSoft.senasoft.repositorios.CiudadanoRepository;
+import com.SenaSoft.senasoft.repositorios.SondeoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,20 +29,7 @@ public class CiudadanoService {
     }
 
     //Metodo para actualizar objetos de ciudadanos
-    public boolean saveOrUpdateCiuddano(Ciudadano ciudadano){
-        Ciudadano ciud = ciudadanoRepository.save(ciudadano);
-        if (ciudadanoRepository.findById(ciud.getId())!=null) {
-            return true;
-        }
-        return false;
-    }
-
-    //Metodo para eliminar
-    public boolean deleteCiudadano(Integer id){
-        ciudadanoRepository.deleteById(id);
-        if (getCiudadanoById(id)!=null){
-            return true;
-        }
-        return false;
+    public Ciudadano saveOrUpdateCiudadano(Ciudadano ciudadano){
+        return ciudadanoRepository.save(ciudadano);
     }
 }

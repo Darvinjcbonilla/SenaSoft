@@ -2,8 +2,12 @@ package com.SenaSoft.senasoft.repositorios;
 
 import com.SenaSoft.senasoft.modelos.Ciudadano;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 
 @Repository
 public interface CiudadanoRepository extends JpaRepository<Ciudadano, Integer> {
+
 }
